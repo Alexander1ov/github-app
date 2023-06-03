@@ -1,0 +1,28 @@
+.header {
+    padding: 0 20px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: #191919;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    img {
+        width: 40px;
+    }
+
+    span {
+        padding-left: 10px;
+        vertical-align: calc(28px/2);
+        color: #fff;
+    }
+}
+
+.nav {
+    color: #fff;
+    display: flex;
+    gap: 50px;
+}
