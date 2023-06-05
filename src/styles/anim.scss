@@ -1,0 +1,104 @@
+@keyframes animBubble {
+    0% {
+
+        transform: translateX(0) translateY(0) rotate(0);
+        opacity: 0;
+        scale: 0.5;
+
+    }
+
+    10% {
+
+        transform: translateX(10vw) translateY(-3vh) rotate(5deg);
+        opacity: 0.5;
+        scale: 0.5;
+
+    }
+
+    20% {
+
+        transform: translateX(15vw) translateY(-15vh) rotate(-30deg);
+        opacity: 0.9;
+        scale: 0.6;
+
+    }
+
+    30% {
+
+        transform: translateX(10vw) translateY(-20vh) rotate(-20deg);
+        opacity: 0.9;
+        scale: 0.64;
+
+    }
+
+    40% {
+
+        transform: translateX(5vw) translateY(-25vh) rotate(-30deg);
+        opacity: 1;
+        scale: 0.75;
+
+    }
+
+    50% {
+
+        transform: translateX(0) translateY(-40vh) rotate(-50deg);
+        opacity: 1;
+        scale: 0.86;
+
+    }
+
+    60% {
+
+        transform: translateX(10vw) translateY(-50vh) rotate(-60deg);
+        opacity: 1;
+        scale: 0.97;
+
+    }
+
+    70% {
+
+        transform: translateX(15vw) translateY(-60vh) rotate(-50deg);
+        opacity: 1;
+        scale: 0.98;
+
+    }
+
+    80% {
+
+        transform: translateX(10vw) translateY(-75vh) rotate(-70deg);
+        opacity: 1;
+        scale: 1;
+
+    }
+
+    90% {
+
+        transform: translateX(5vw) translateY(-95vh) rotate(-90deg);
+        opacity: 1;
+        scale: 1;
+
+    }
+
+
+    100% {
+
+        transform: translateX(0) translateY(-115vh) rotate(-100deg);
+        opacity: 1;
+    }
+}
+
+.animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbleFirst {
+    bottom: -150px;
+    width: 300px;
+    position: absolute;
+    animation: animStar 20s linear infinite
+}

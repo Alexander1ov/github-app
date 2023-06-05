@@ -11,6 +11,7 @@ import Home from "../Home/Home";
 import styles from "./Main.module.scss";
 import Repositories from "../Repositories/Repositories";
 import DetailsRepository from "../DetailsRepository/DetailsRepository";
+import BubbleAnimation from "../BubbleAnimation/BubbleAnimation";
 
 const Main: FC = () => {
   // const { loading, error } = useQuery(GET_REPOSITORIES);
@@ -30,9 +31,9 @@ const Main: FC = () => {
           <Route path={ROUTES.HOME} element={<Home />}></Route>
           <Route path={ROUTES.REPOSITORIES} element={<Repositories />}></Route>
           <Route path={ROUTES.REPOSITORY} element={<DetailsRepository />}></Route>
-        </Routes>
-        )
-      )} */}
+          </Routes>
+          )
+        )} */}
 
 
 <Routes>
@@ -40,6 +41,7 @@ const Main: FC = () => {
           <Route path={ROUTES.REPOSITORIES} element={<Repositories />}></Route>
           <Route path={ROUTES.REPOSITORY} element={<DetailsRepository />}></Route>
         </Routes>
+        <BubbleAnimation/>
     </main>
   );
 };

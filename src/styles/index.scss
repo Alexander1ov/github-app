@@ -6,7 +6,7 @@
 body {
     margin:  auto;
     padding: 0;
-    width: 1280px;
+    max-width: 1280px;
     background: #000000;
     overflow-x: hidden;
 
@@ -15,6 +15,7 @@ body {
 }
 
 #root {
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }

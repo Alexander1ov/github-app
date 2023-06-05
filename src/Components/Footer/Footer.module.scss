@@ -1,15 +1,29 @@
 .footer {
+  padding: 0 20px;
   height: 60px;
-
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: #576067;
   font-size: 12px;
   background-color: #191919;
   border-radius: 6px;
+  z-index: 10;
+  a{
+
+    color: #F3AA4E;
+
+  }
 }
 
-.logo img {
-  width: 30px;
+.logo {
+  span {
+    margin-right: 10px;
+    vertical-align: 50%;
+  }
+
+  img {
+    width: 30px;
+  }
+ 
 }
