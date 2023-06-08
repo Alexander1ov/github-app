@@ -4,7 +4,7 @@ import { GET_REPOSITORIES } from "../../graphql/repositories";
 import { setRepositoriesList } from "../slice/repositoriesSlice";
 
 export default function useRepositories() {
-  const { repositoriesList } = useAppSelector((state) => state.repositories);
+  const { repositories } = useAppSelector((state) => state.repositories);
   const dispatch = useAppDispatch();
 
   const getRepositoriesList = async () => {
@@ -13,5 +13,5 @@ export default function useRepositories() {
     });
     dispatch(setRepositoriesList(response.data.viewer));
   };
-  return { getRepositoriesList, repositoriesList };
+  return { getRepositoriesList, repositories };
 }

@@ -87,18 +87,3 @@
     }
 }
 
-.animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.bubbleFirst {
-    bottom: -150px;
-    width: 300px;
-    position: absolute;
-    animation: animStar 20s linear infinite
-}

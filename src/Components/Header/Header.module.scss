@@ -1,8 +1,7 @@
 .header {
-    padding: 0 20px;
-    height: 60px;
+    padding: 20px;
+    height: 80px;
     border-radius: 6px;
-    background-color: #191919;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -11,13 +10,17 @@
 }
 
 .logo {
+    a{
+        display: flex;
+        align-items: center;
+        gap:10px
+    }
     img {
-        width: 40px;
+        width: 60px;
     }
 
     span {
-        padding-left: 10px;
-        vertical-align: calc(28px/2);
+        font-size: 18px;
         color: #fff;
     }
 }

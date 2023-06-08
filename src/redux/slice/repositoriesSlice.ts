@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Repo, RepositoriesState } from "../types/repositoriesTypes";
 
 const initialState: RepositoriesState = {
-  repositoriesList: null,
+  repositories: null,
   loading: false,
   error: null,
 };
@@ -11,8 +11,8 @@ const repositoriesSlice = createSlice({
   name: "repositories",
   initialState,
   reducers: {
-    setRepositoriesList(state, action: PayloadAction<Repo[]>) {
-      state.repositoriesList = action.payload;
+    setRepositoriesList(state, action: PayloadAction<Repo>) {
+      state.repositories = action.payload;
     },
   },
 });

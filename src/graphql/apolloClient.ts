@@ -4,7 +4,7 @@ const httpLink = new HttpLink({
   uri: "https://api.github.com/graphql",
   headers: {
     Authorization:
-      "Bearer &&&&&&",
+      "Bearer ***********",
   },
 });
 

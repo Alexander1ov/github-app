@@ -15,16 +15,18 @@ import BubbleAnimation from "../BubbleAnimation/BubbleAnimation";
 
 const Main: FC = () => {
   // const { loading, error } = useQuery(GET_REPOSITORIES);
-  // const { getRepositoriesList, repositoriesList } = useRepositories();
+  const { getRepositoriesList, repositories } = useRepositories();
 
   // console.log(repositoriesList);
 
   useEffect(() => {
-    // getRepositoriesList();
+    getRepositoriesList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <main className={styles.main}>
+      <BubbleAnimation />
+
       {/* {error?  (<h2>Произошла ошибка</h2>):(
         loading? (<h2>Загрузка...</h2>):(
           <Routes>
@@ -35,13 +37,11 @@ const Main: FC = () => {
           )
         )} */}
 
-
-<Routes>
-          <Route path={ROUTES.HOME} element={<Home />}></Route>
-          <Route path={ROUTES.REPOSITORIES} element={<Repositories />}></Route>
-          <Route path={ROUTES.REPOSITORY} element={<DetailsRepository />}></Route>
-        </Routes>
-        <BubbleAnimation/>
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Home />}></Route>
+        <Route path={ROUTES.REPOSITORIES} element={<Repositories />}></Route>
+        <Route path={ROUTES.REPOSITORY} element={<DetailsRepository />}></Route>
+      </Routes>
     </main>
   );
 };

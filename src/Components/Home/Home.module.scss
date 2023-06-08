@@ -1,0 +1,77 @@
+.section {
+  position: relative;
+}
+
+.content {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  gap: 18%;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f1e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    width: 250px;
+  }
+}
+
+.personalInfo {
+  h4 {
+    margin: 20px auto;
+    width: fit-content;
+    font-size: 20px;
+  }
+
+  p {
+    margin: auto;
+    width: fit-content;
+    font-size: 30px;
+  }
+}
+
+.info {
+  width: 45%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.link {
+  margin-top: 20%;
+  text-align: center;
+
+  a {
+    padding: 6px;
+    border: 2px solid #f3aa4e;
+    border-radius: 6px;
+    background-color: #19191936;
+    font-size: 50px;
+    color: #9b8d8d;
+
+    &:hover {
+      padding: 2px;
+      border: 4px solid #f3a94ebf;
+      background-color: #191919;
+      font-size: 48px;
+      color: #595757;
+    }
+
+    &:active {
+      color: #9b61b9;
+    }
+  }
+}
