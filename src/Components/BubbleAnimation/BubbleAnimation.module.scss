@@ -1,122 +1,122 @@
 @import url(../../styles/anim.scss);
 
 @mixin bubble($width, $time) {
-    bottom: -150px;
-    width: $width ;
-    position: absolute;
-    animation: animBubble $time linear infinite
+  bottom: -150px;
+  width: $width;
+  position: absolute;
+  animation: animBubble $time linear infinite;
 }
 
 .animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0.5;
 }
 
 .bubbleFirst {
-    left: -210px;
-    @include bubble(150px, 40s);
+  left: -210px;
+  @include bubble(150px, 40s);
 }
 
 .bubbleSecond {
-    right: 200px;
-    @include bubble(125px, 50s);
+  right: 200px;
+  @include bubble(125px, 50s);
 }
 
 .bubbleThird {
-    @include bubble(50px, 36s);
+  @include bubble(50px, 36s);
 }
 
 .bubbleFourth {
-    right: 110px;
+  right: 110px;
 
-    @include bubble(75px, 42s);
+  @include bubble(75px, 42s);
 }
 
 .bubbleFifth {
-    left: 210px;
+  left: 210px;
 
-    @include bubble(100px, 48s);
+  @include bubble(100px, 48s);
 }
 
 .bubbleSixth {
-    right: 210px;
+  right: 210px;
 
-    @include bubble(150px, 60s);
+  @include bubble(150px, 60s);
 }
 
 .bubbleSeventh {
-    left: 410px;
+  left: 410px;
 
-    @include bubble(80px, 58s);
+  @include bubble(80px, 58s);
 }
 
 .bubbleEighth {
-    right: 210px;
+  right: 210px;
 
-    @include bubble(100px, 44s);
+  @include bubble(100px, 44s);
 }
 
 .bubbleNinth {
-    left: 410px;
+  left: 410px;
 
-    @include bubble(50px, 46s);
+  @include bubble(50px, 46s);
 }
 
 .bubbleTenth {
-    right: 310px;
+  right: 310px;
 
-    @include bubble(30px, 49s);
+  @include bubble(30px, 49s);
 }
 
 .bubbleEleventh {
-    left: 610px;
+  left: 610px;
 
-    @include bubble(80px, 31s);
+  @include bubble(50px, 31s);
 }
 
 .bubbleTwelfth {
-    right: 510px;
+  right: 510px;
 
-    @include bubble(55px, 32.8s);
+  @include bubble(55px, 32.8s);
 }
 
 .bubbleThirteenth {
-    left: 710px;
+  left: 710px;
 
-    @include bubble(30px, 29.3s);
+  @include bubble(30px, 29.3s);
 }
 
 .bubbleFourteenth {
-    right: 610px;
+  right: 610px;
 
-    @include bubble(40px, 27.5s);
+  @include bubble(40px, 27.5s);
 }
 
 .bubbleFifteenth {
-    left: 810px;
+  left: 810px;
 
-    @include bubble(59px, 27s);
+  @include bubble(59px, 27s);
 }
 
 .bubbleSixteenth {
-    right: 810px;
+  right: 810px;
 
-    @include bubble(75px, 24s);
+  @include bubble(75px, 24s);
 }
 
 .bubbleSeventeenth {
-    left: 910px;
+  left: 910px;
 
-    @include bubble(70px, 35.5s);
+  @include bubble(70px, 35.5s);
 }
 
 .bubbleEighteenth {
-    right: 910px;
+  right: 910px;
 
-    @include bubble(80px, 47s);
+  @include bubble(80px, 47s);
 }

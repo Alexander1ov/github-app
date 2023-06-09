@@ -6,25 +6,22 @@ export const GET_REPOSITORIES = gql`
       name
       login
       avatarUrl
-      repositories(first: 100) {
-        edges {
-          node {
-            name
+      createdAt
+        repositories(last: 10) {
+          totalCount
+          totalDiskUsage
+          nodes {
             id
+            url
+            name
             createdAt
-            description
-            forkCount
-            isMirror
-            commitComments(last: 1) {
-              totalCount
+            commitComments(last: 10) {
               nodes {
                 id
-                body
               }
             }
           }
         }
       }
-    }
   }
 `;

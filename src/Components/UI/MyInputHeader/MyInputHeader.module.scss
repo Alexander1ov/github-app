@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  align-items: center;
+  background: #5957573c;
+  border-radius: 6px;
+  height: 27px;
+  padding: 7px 10px;
+  column-gap: 16px;
+  width: 300px;
+  position: relative;
+}
+
+.icon {
+    margin-bottom: 3px;
+  width: 13px;
+  height: 13px;
+  img {
+    width: 13px;
+    height: 100%;
+  }
+}
+
+.input {
+  flex-grow: 1;
+  input {
+    border: none;
+    font-size: 15px;
+    line-height: 14px;
+    color: #f3aa4e;
+    background: none;
+    outline: none;
+    width: 100%;
+  }
+}
+

@@ -1,11 +1,22 @@
+export interface RepositoriesNodes {
+  id: string;
+  url: string;
+  name: string;
+  createdAt: string;
+}
+
+export interface Repositories {
+  totalCount: number;
+  totalDiskUsage: number;
+  nodes: Array<RepositoriesNodes>;
+}
+
 export interface Repo {
   name: string;
   login: string;
   avatarUrl: string;
-  // Nominal: number;
-  // Name: string;
-  // Value: number;
-  // Previous: number;
+  createdAt: string;
+  repositories: Repositories;
 }
 
 export interface RepositoriesState {

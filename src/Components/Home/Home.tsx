@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../hooks/hooks";
+
 import { ROUTES } from "../../constants/routes";
 
 import AVATAR from "../../img/avatar.png";
 import styles from "./Home.module.scss";
-import { useAppSelector } from "../../hooks/hooks";
 
 const Home: FC = () => {
   const { repositories } = useAppSelector((state) => state.repositories);

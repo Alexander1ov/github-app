@@ -8,10 +8,11 @@ import { GET_REPOSITORIES } from "../../graphql/repositories";
 
 import Home from "../Home/Home";
 
-import styles from "./Main.module.scss";
 import Repositories from "../Repositories/Repositories";
 import DetailsRepository from "../DetailsRepository/DetailsRepository";
 import BubbleAnimation from "../BubbleAnimation/BubbleAnimation";
+
+import styles from "./Main.module.scss";
 
 const Main: FC = () => {
   // const { loading, error } = useQuery(GET_REPOSITORIES);
