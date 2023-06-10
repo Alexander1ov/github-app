@@ -74,3 +74,12 @@
     text-shadow: 0 0 #f3aa4e, 0 0 #943d9d, 0 0 beige;
   }
 }
+@keyframes animRepoInfo {
+  0% {
+    transform: translateX(100vw) scale(0);
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

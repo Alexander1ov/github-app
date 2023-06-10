@@ -1,4 +1,4 @@
-@import url(../../styles/anim.scss);
+@import "../../styles/anim.scss";
 
 .section {
   font-family: "Courier New", Courier, monospace;
@@ -10,11 +10,20 @@
     animation: animHeader 2s forwards;
   }
 }
-
+.info {
+  padding-right: 20px;
+  text-align: right;
+  font-weight: 600;
+  font-size: 18px;
+  color: #f3aa4e;
+  text-shadow: 1px 1px #000, -1px -1px #000, -1px 1px #000, 1px -1px #000,
+    -2px -2px 5px #943d9d, 2px 2px 5px #943d9d;
+  animation: animRepoInfo 2s forwards;
+}
 .content {
   width: 100%;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 50px;
 }

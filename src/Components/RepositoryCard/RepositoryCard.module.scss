@@ -1,8 +1,45 @@
-.card{
-    margin: 5px;
-    width: 20%;
-    height: 500px;
-    background-color: rgb(55, 58, 58);
-    display: flex;
+.card {
+  cursor: pointer;
+  position: relative;
+  padding: 15px;
+  width: 615px;
+  height: 500px;
+  border: solid 1px #f3aa4e;
+  border-radius: 6px;
+  background-color: rgba(89, 87, 87, 0.2352941176);
+  h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+  &:hover {
+    border-color: #943d9d;
+    transform: scale(1.01);
+    h3 {
+      text-transform: uppercase;
+      color: #f3aa4e;
+    }
+  }
+}
+.img {
+    text-align: right;
 
+  img {
+    width: 350px;
+    height: 270px;
+  }
+}
+
+.info {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  text-align: right;
+  a {
+    cursor: grab;
+    color: #f3aa4e;
+    &:hover {
+      color: #943d9d;
+    }
+  }
 }

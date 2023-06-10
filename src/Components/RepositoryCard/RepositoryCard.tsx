@@ -1,5 +1,7 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
+import GIT from "../../img/git.png";
 import styles from "./RepositoryCard.module.scss";
 
 interface RepositoryCardProps {
@@ -9,12 +11,21 @@ interface RepositoryCardProps {
 }
 
 const RepositoryCard: FC<RepositoryCardProps> = ({ title, url, createdAt }) => {
+  const dateCreation = createdAt.slice(0, 10).split("-").reverse().join(".");
+
   return (
     <section className={styles.card}>
+      <h3>{title}</h3>
+      <div className={styles.img}>
+        <img src={GIT} alt="" />
+      </div>
       <div className={styles.info}>
-        <p>{title}</p>
-        <p>{url}</p>
-        <p>{createdAt}</p>
+        <Link to={url} target="_blank" rel="noreferrer">
+          Link to GitHub repository
+        </Link>
+
+        <p></p>
+        <p>Date of creation: {dateCreation}</p>
       </div>
     </section>
   );

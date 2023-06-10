@@ -7,21 +7,24 @@ export const GET_REPOSITORIES = gql`
       login
       avatarUrl
       createdAt
-        repositories(last: 10) {
-          totalCount
-          totalDiskUsage
-          nodes {
+      repositories(last: 10) {
+        totalCount
+        totalDiskUsage
+        nodes {
+          id
+          name
+          openGraphImageUrl
+          url
+          createdAt
+          pushedAt
+          owner {
             id
+            login
             url
-            name
-            createdAt
-            commitComments(last: 10) {
-              nodes {
-                id
-              }
-            }
+            avatarUrl
           }
         }
       }
+    }
   }
 `;

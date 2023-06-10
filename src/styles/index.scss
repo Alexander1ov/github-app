@@ -1,26 +1,26 @@
 @import url(./fonts.scss);
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: auto;
-    padding: 0;
-    max-width: 1280px;
-    background: #000000;
-    overflow-x: hidden;
+  margin: auto;
+  padding: 0;
+  max-width: 1280px;
+  background: #000000;
+  overflow-x: hidden;
 
-    font-family: "RobotoMedium";
-    color: beige;
+  font-family: "RobotoMedium";
+  color: beige;
 }
 
 #root {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
