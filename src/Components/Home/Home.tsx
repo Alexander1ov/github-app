@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import { useAppSelector } from "../../hooks/hooks";
 
 import { ROUTES } from "../../constants/routes";
 
 import AVATAR from "../../img/avatar.png";
 import styles from "./Home.module.scss";
+import MyButtonLink from "../UI/MyButtonLink/MyButtonLink";
 
 const Home: FC = () => {
   const { repositories } = useAppSelector((state) => state.repositories);
@@ -38,9 +38,11 @@ const Home: FC = () => {
           </p>
         </div>
       </div>
-      <div className={styles.link}>
-        <Link to={ROUTES.REPOSITORIES}>Repositories page</Link>
-      </div>
+      <MyButtonLink
+        className={styles.link}
+        text="Repositories page"
+        url={ROUTES.REPOSITORIES}
+      />
     </section>
   );
 };

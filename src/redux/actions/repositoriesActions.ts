@@ -10,7 +10,7 @@ export default function useRepositories() {
   const getRepositoriesList = async () => {
     const response = await apolloClient.query({
       query: GET_REPOSITORIES,
-    });    
+    });
     dispatch(setRepositoriesList(response.data.viewer));
   };
   return { getRepositoriesList, repositories };

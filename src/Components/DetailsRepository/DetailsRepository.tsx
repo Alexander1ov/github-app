@@ -1,13 +1,52 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
+import { useParams } from "react-router-dom";
+import { useAppSelector } from "../../hooks/hooks";
 
-import styles from "./DetailsRepository.module.scss"
+import { calcDateCreation } from "../../constants/const";
+import MyButtonLink from "../UI/MyButtonLink/MyButtonLink";
 
-const DetailsRepository:FC = () => {
+import styles from "./DetailsRepository.module.scss";
+
+const DetailsRepository: FC = () => {
+  const { id } = useParams();
+  const { repositories } = useAppSelector((state) => state.repositories);
+  const repo = repositories?.repositories.nodes.find((repo) => id === repo.id);
+  if (!repo) return <></>;
+
   return (
     <section className={styles.section}>
-      Репозиторий
+      <h2>{repo.name}</h2>
+      <div className={styles.content}>
+        <div className={styles.img}>
+          <img src={repo.openGraphImageUrl} alt="" />
+        </div>
+        <div className={styles.info}>
+          <div className={styles.text}>
+            <h3>Name: {repo.name} </h3>
+            <h4>Owner: {repo.owner.login} </h4>{" "}
+            <p>
+              Date of creation: {calcDateCreation(repo.createdAt)}
+              <br />
+              Last commit date: {calcDateCreation(repo.pushedAt)}
+            </p>
+            <p></p>
+          </div>
+          <div className={styles.linkGitHub}>
+            <MyButtonLink
+              className={styles.link}
+              text="Link to owner profile"
+              url={repo.owner.url}
+            />
+            <MyButtonLink
+              className={styles.link}
+              text="Link to github repository"
+              url={repo.url}
+            />
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default DetailsRepository
+export default DetailsRepository;

@@ -13,8 +13,8 @@ export const GET_REPOSITORIES = gql`
         nodes {
           id
           name
-          openGraphImageUrl
           url
+          openGraphImageUrl
           createdAt
           pushedAt
           owner {

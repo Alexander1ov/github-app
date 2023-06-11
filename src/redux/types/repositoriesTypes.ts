@@ -1,8 +1,16 @@
 export interface RepositoriesNodes {
   id: string;
-  url: string;
   name: string;
+  openGraphImageUrl: string;
+  url: string;
   createdAt: string;
+  pushedAt: string;
+  owner: {
+    id: string;
+    login: string;
+    url: string;
+    avatarUrl: string;
+  };
 }
 
 export interface Repositories {

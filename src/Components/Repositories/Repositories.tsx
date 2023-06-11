@@ -25,12 +25,17 @@ const Repositories: FC = () => {
       </div>
       {listRepo && (
         <div className={styles.content}>
-          {listRepo.map((repo) => (
+          {listRepo.map((repo, index) => (
             <RepositoryCard
               key={repo.id}
+              id={repo.id}
+              number={index + 1}
               title={repo.name}
               url={repo.url}
               createdAt={repo.createdAt}
+              pushedAt={repo.pushedAt}
+              ownerName={repo.owner.login}
+              ownerAvatar={repo.owner.avatarUrl}
             />
           ))}
         </div>

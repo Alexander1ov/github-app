@@ -1,0 +1,10 @@
+@mixin Repo {
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    color: transparent;
+    animation: animHeader 2s forwards;
+  }
+}

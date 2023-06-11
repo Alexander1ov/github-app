@@ -1,19 +1,22 @@
 .card {
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
   padding: 15px;
   width: 615px;
-  height: 500px;
-  border: solid 1px #f3aa4e;
+  height: 440px;
   border-radius: 6px;
-  background-color: rgba(89, 87, 87, 0.2352941176);
+  background-color: #151414c5;
+  color: beige;
   h3 {
     text-align: center;
     text-transform: capitalize;
     font-size: 25px;
   }
+  p {
+    text-align: right;
+  }
   &:hover {
-    border-color: #943d9d;
+    border: solid 1px #943d9d;
     transform: scale(1.01);
     h3 {
       text-transform: uppercase;
@@ -21,25 +24,50 @@
     }
   }
 }
-.img {
-    text-align: right;
 
-  img {
-    width: 350px;
-    height: 270px;
-  }
+.number {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  rotate: 25deg;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #943d9d;
 }
 
 .info {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  img {
+    width: 50%;
+  }
+}
+.author {
+  width: 50%;
+  height: fit-content;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555555;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
   position: absolute;
   right: 15px;
   bottom: 0;
   text-align: right;
-  a {
-    cursor: grab;
+  p:first-child {
     color: #f3aa4e;
-    &:hover {
-      color: #943d9d;
-    }
   }
 }
