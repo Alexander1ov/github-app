@@ -1,0 +1,33 @@
+@mixin Side($degree) {
+  width: 13px;
+  height: 13px;
+  border: solid #f3aa4e;
+  border-width: 0 3px 3px 0;
+  background: none;
+  transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+  &:hover {
+    transition: 0.3s;
+    scale: 1.3;
+  }
+  &:active {
+    transition: 0.01s;
+    scale: 1;
+  }
+}
+.arrow {
+  cursor: pointer;
+  margin: 50px auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right {
+  @include Side(-45deg);
+}
+
+.left {
+  @include Side(135deg);
+}

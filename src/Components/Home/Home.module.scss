@@ -41,6 +41,24 @@
     font-size: 30px;
   }
 }
+.btn {
+  cursor: pointer;
+  margin-top: 20px;
+  width: 135px;
+  border: 2px solid #f3aa4e;
+  border-radius: 6px;
+  background-color: #19191936;
+  font-size: 19px;
+  color: #9b8d8d;
+  &:hover {
+    background-color: #191919;
+    color: #595757;
+  }
+
+  &:active {
+    color: #9b61b9;
+  }
+}
 
 .info {
   width: 45%;

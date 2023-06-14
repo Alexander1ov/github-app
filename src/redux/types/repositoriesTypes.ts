@@ -19,16 +19,7 @@ export interface Repositories {
   nodes: Array<RepositoriesNodes>;
 }
 
-export interface Repo {
-  name: string;
-  login: string;
-  avatarUrl: string;
-  createdAt: string;
-  repositories: Repositories;
-}
-
 export interface RepositoriesState {
-  repositories: Repo | null;
-  loading: boolean;
-  error: string | null;
+  repositories: Repositories | null;
+  pageNumberRepositories: number;
 }

@@ -1,0 +1,17 @@
+.pagination {
+  font-size: 20px;
+
+  &:hover {
+    transition: 0.3s;
+    scale: 1.3;
+  }
+
+  &:active {
+    transition: 0.01s;
+    scale: 1;
+  }
+}
+
+.active {
+  color: #e785b3;
+}

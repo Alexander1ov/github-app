@@ -1,15 +1,18 @@
 .navLink {
-    &:hover {
-        transform: scale(1.1);
-    }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .link {
-    font-size: 19px;
-    font-weight: 500;
-    color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
 
-    &.active {
-        color: #F3AA4E;
-    }
+  &.active {
+    color: #f3aa4e;
+  }
 }

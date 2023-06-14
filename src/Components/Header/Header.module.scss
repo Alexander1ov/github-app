@@ -1,32 +1,50 @@
 .header {
-    padding: 20px;
-    height: 80px;
-    border-radius: 6px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+  padding: 20px;
+  height: 80px;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
 }
 
 .logo {
-    a{
-        display: flex;
-        align-items: center;
-        gap:10px
-    }
-    img {
-        width: 60px;
-    }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  img {
+    width: 60px;
+  }
 
-    span {
-        font-size: 18px;
-        color: #fff;
-    }
+  span {
+    font-size: 18px;
+    color: #fff;
+  }
+}
+.btn {
+  cursor: pointer;
+  border: 2px solid #f3aa4e;
+  border-radius: 6px;
+  background-color: #19191936;
+  font-size: 19px;
+  color: #fff;
+  &:hover {
+    background-color: #191919;
+    color: #595757;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    color: #9b61b9;
+    transform: scale(0.9);
+  }
 }
 
 .nav {
-    color: #fff;
-    display: flex;
-    gap: 50px;
+  color: #fff;
+  display: flex;
+  gap: 50px;
 }

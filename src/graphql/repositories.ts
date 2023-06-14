@@ -1,13 +1,9 @@
 import { gql } from "@apollo/client";
 
 export const GET_REPOSITORIES = gql`
-  query AllRepositories {
+  query AllRepositories($last: Int) {
     viewer {
-      name
-      login
-      avatarUrl
-      createdAt
-      repositories(last: 10) {
+      repositories(last: $last) {
         totalCount
         totalDiskUsage
         nodes {

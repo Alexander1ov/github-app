@@ -1,21 +1,23 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Repo, RepositoriesState } from "../types/repositoriesTypes";
+import { Repositories, RepositoriesState } from "../types/repositoriesTypes";
 
 const initialState: RepositoriesState = {
   repositories: null,
-  loading: false,
-  error: null,
+  pageNumberRepositories: 1,
 };
 
 const repositoriesSlice = createSlice({
   name: "repositories",
   initialState,
   reducers: {
-    setRepositoriesList(state, action: PayloadAction<Repo>) {
+    setRepositoriesList(state, action: PayloadAction<Repositories>) {
       state.repositories = action.payload;
+    },
+    setPageNumber(state, action: PayloadAction<number>) {
+      state.pageNumberRepositories = action.payload;
     },
   },
 });
 
-export const { setRepositoriesList } = repositoriesSlice.actions;
+export const { setRepositoriesList, setPageNumber } = repositoriesSlice.actions;
 export default repositoriesSlice.reducer;

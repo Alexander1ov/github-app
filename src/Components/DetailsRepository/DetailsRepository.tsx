@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useParams } from "react-router-dom";
-import { useAppSelector } from "../../hooks/hooks";
+import useRepositories from "../../redux/actions/repositoriesActions";
 
 import { calcDateCreation } from "../../constants/const";
 import MyButtonLink from "../UI/MyButtonLink/MyButtonLink";
@@ -8,9 +8,10 @@ import MyButtonLink from "../UI/MyButtonLink/MyButtonLink";
 import styles from "./DetailsRepository.module.scss";
 
 const DetailsRepository: FC = () => {
+  const { repositories } = useRepositories();
   const { id } = useParams();
-  const { repositories } = useAppSelector((state) => state.repositories);
-  const repo = repositories?.repositories.nodes.find((repo) => id === repo.id);
+
+  const repo = repositories?.nodes.find((repo) => id === repo.id);
   if (!repo) return <></>;
 
   return (
