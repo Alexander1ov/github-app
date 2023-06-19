@@ -1,19 +1,34 @@
 import React, { FC } from "react";
 import { useParams } from "react-router-dom";
-import useRepositories from "../../redux/actions/repositoriesActions";
+import { useQuery } from "@apollo/client";
 
 import { calcDateCreation } from "../../constants/const";
+import { CURRENT_REPOSITORY } from "../../graphql/searchRepositories";
+import useRepositories from "../../redux/actions/repositoriesActions";
+import useSearch from "../../redux/actions/searchActions";
+
 import MyButtonLink from "../UI/MyButtonLink/MyButtonLink";
 
 import styles from "./DetailsRepository.module.scss";
 
 const DetailsRepository: FC = () => {
-  const { repositories } = useRepositories();
   const { id } = useParams();
+  const { repositories } = useRepositories();
+  const { searchRepo } = useSearch();
 
-  const repo = repositories?.nodes.find((repo) => id === repo.id);
+  const { loading, data, error } = useQuery(CURRENT_REPOSITORY, {
+    variables: { id },
+  });
+
+  let repo = repositories?.nodes.find((repo) => id === repo.id);
+  if (!repo) {
+    repo = searchRepo?.nodes.find((repo) => id === repo.id);
+  }
+  if (!repo && !loading && !error) {
+    repo = data.node;
+  }
+
   if (!repo) return <></>;
-
   return (
     <section className={styles.section}>
       <h2>{repo.name}</h2>

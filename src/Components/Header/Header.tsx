@@ -1,8 +1,9 @@
-import React, { FC, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import useRepositories from "../../redux/actions/repositoriesActions";
+import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 import { ROUTES } from "../../constants/routes";
+import useRepositories from "../../redux/actions/repositoriesActions";
+
 import MyNavLink from "../UI/MyNavLink/MyNavLink";
 import MyInputHeader from "../UI/MyInputHeader/MyInputHeader";
 import MyButtonOut from "../UI/MyButtonOut/MyButtonOut";
@@ -12,12 +13,6 @@ import styles from "./Header.module.scss";
 
 const Header: FC = () => {
   const { pageNumberRepositories } = useRepositories();
-  const [searchValue, setSearchValue] = useState("");
-  const { pathname } = useLocation();
-
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(e.currentTarget.value);
-  };
 
   return (
     <header className={styles.header}>
@@ -27,16 +22,12 @@ const Header: FC = () => {
           <span>GitHubApp</span>
         </Link>
       </div>
-
-      {pathname === "/" && (
-        <MyInputHeader searchValue={searchValue} handleSearch={handleSearch} />
-      )}
-
+      <MyInputHeader />
       <nav className={styles.nav}>
         <MyNavLink route={ROUTES.HOME} text="Home" />
         <MyNavLink
           route={`${ROUTES.REPOSITORIES}?pageNumber=${pageNumberRepositories}`}
-          text="Repositories"
+          text="My repositories"
         />
         <MyNavLink route="https://github.com/" text="Original GitHub" />
         <MyButtonOut className={styles.btn} text="Exit" />

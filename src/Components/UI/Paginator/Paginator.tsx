@@ -1,28 +1,30 @@
-import React, { useEffect, FC } from "react";
-import { useSearchParams } from "react-router-dom";
+import React, { FC } from "react";
+import { SetURLSearchParams } from "react-router-dom";
 
 import NumberPaginator from "./NumberPaginator";
 
 import styles from "./Paginator.module.scss";
-import useRepositories from "../../../redux/actions/repositoriesActions";
 
 interface PaginatorProps {
   sumRepo: number;
+  searchValue?: string;
+  searchParams: URLSearchParams;
+  location: string;
   getPageNumber: (num: number) => void;
+  setSearchParams: SetURLSearchParams;
+  getList?: (quantityRepo: number) => Promise<void>;
 }
 
-const Paginator: FC<PaginatorProps> = ({ sumRepo, getPageNumber }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+const Paginator: FC<PaginatorProps> = ({
+  sumRepo,
+  searchValue,
+  searchParams,
+  location,
+  getPageNumber,
+  setSearchParams,
+}) => {
   const currentPage = Number(searchParams.get("pageNumber"));
-  const sumPage = Math.max(Math.ceil(sumRepo / 10), 1);
-
-  const { getRepositoriesList, repositories } = useRepositories();
-
-  useEffect(() => {
-    if (searchParams.get("pageNumber")) {
-      getRepositoriesList(currentPage * 10);
-    }
-  }, [currentPage]);
+  const sumPage = Math.min(Math.max(Math.ceil(sumRepo / 10), 1), 10);
 
   const pagination: number[] = [];
   for (let i = 1; i <= sumPage; i++) {
@@ -31,13 +33,25 @@ const Paginator: FC<PaginatorProps> = ({ sumRepo, getPageNumber }) => {
 
   const handlePage = (direction: string | number) => {
     if (direction === "left" && currentPage > 1) {
-      setSearchParams(`pageNumber=${currentPage - 1}`);
+      if (location === "search") {
+        setSearchParams(`search=${searchValue}&pageNumber=${currentPage - 1}`);
+      } else if (location === "myRepo") {
+        setSearchParams(`pageNumber=${currentPage - 1}`);
+      }
       getPageNumber(currentPage - 1);
     } else if (direction === "right" && currentPage < sumPage) {
-      setSearchParams(`pageNumber=${currentPage + 1}`);
+      if (location === "search") {
+        setSearchParams(`search=${searchValue}&pageNumber=${currentPage + 1}`);
+      } else if (location === "myRepo") {
+        setSearchParams(`pageNumber=${currentPage + 1}`);
+      }
       getPageNumber(currentPage + 1);
     } else if (typeof direction === "number") {
-      setSearchParams(`pageNumber=${direction}`);
+      if (location === "search") {
+        setSearchParams(`search=${searchValue}&pageNumber=${direction}`);
+      } else if (location === "myRepo") {
+        setSearchParams(`pageNumber=${direction}`);
+      }
       getPageNumber(direction);
     }
   };

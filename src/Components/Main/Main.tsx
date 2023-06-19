@@ -2,11 +2,12 @@ import React, { FC, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
+import { ROUTES } from "../../constants/routes";
 import { GET_USER } from "../../graphql/user";
 import useRepositories from "../../redux/actions/repositoriesActions";
 import useUser from "../../redux/actions/userActions ";
-import { ROUTES } from "../../constants/routes";
 
+import PageSearch from "../PageSearch/PageSearch";
 import Home from "../Home/Home";
 import Repositories from "../Repositories/Repositories";
 import DetailsRepository from "../DetailsRepository/DetailsRepository";
@@ -21,7 +22,7 @@ const Main: FC = () => {
 
   useEffect(() => {
     getUserData();
-    getRepositoriesList(10);
+    getRepositoriesList(100);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -33,6 +34,7 @@ const Main: FC = () => {
         <h2>Загрузка...</h2>
       ) : (
         <Routes>
+          <Route path={ROUTES.SEARCH} element={<PageSearch />}></Route>
           <Route path={ROUTES.HOME} element={<Home />}></Route>
           <Route path={ROUTES.REPOSITORIES} element={<Repositories />}></Route>
           <Route

@@ -1,0 +1,25 @@
+.item {
+  font-size: 13px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  &:hover {
+    color: #f3aa4e;
+    background-color: #ffffff30;
+    border-radius: 3px;
+  }
+}
+
+.image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #555555;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}

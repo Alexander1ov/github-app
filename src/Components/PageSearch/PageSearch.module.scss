@@ -1,8 +1,14 @@
-@import "../../styles/vars.scss";
 @import "../../styles/anim.scss";
 
 .section {
-  @include Repo
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #f3aa4e;
+  }
 }
 
 .info {

@@ -7,6 +7,7 @@
   background-color: #171616f1;
   z-index: 13;
 }
+
 .box {
   margin: 300px auto;
   padding: 25px;
@@ -17,6 +18,7 @@
   background-color: #191919d3;
   text-align: center;
   color: #fcfcfc;
+
   a {
     color: #9b61b9;
   }
@@ -29,20 +31,24 @@
     border-radius: 5px;
     background-color: #595757;
     color: #dff3ed;
+
     &:focus {
       border: 2px solid #f3aa4e;
     }
   }
+
   button {
     padding: 5px;
     border: 2px solid #01120d8a;
     border-radius: 6px;
     background-color: #595757;
     color: #fcfcfc;
+
     &:hover {
       border-color: #f3aa4e;
       transform: scale(1.05);
     }
+
     &:active {
       color: #9b61b9;
       transform: scale(0.95);

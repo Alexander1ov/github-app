@@ -1,6 +1,6 @@
 export const ROUTES = {
-    HOME: "/",
-    REPOSITORIES: "repositories",
-    REPOSITORY: 'repository/:id',
-
-  };
+  HOME: "/",
+  SEARCH: "search",
+  REPOSITORIES: "repositories",
+  REPOSITORY: "repository/:id",
+};

@@ -1,4 +1,4 @@
-export interface RepositoriesNodes {
+export interface RepositoriesSearch {
   id: string;
   name: string;
   openGraphImageUrl: string;
@@ -13,20 +13,15 @@ export interface RepositoriesNodes {
   };
 }
 
-export interface Repositories {
-  totalCount: number;
-  totalDiskUsage: number;
-  nodes: Array<RepositoriesNodes>;
-}
-
 export interface SearchRepo {
   repositoryCount: number;
-  nodes: Array<RepositoriesNodes>;
+  nodes: Array<RepositoriesSearch>;
 }
 
-export interface RepositoriesState {
-  repositories: Repositories | null;
+export interface SearchState {
   searchRepo: SearchRepo | null;
   searchValue: string;
-  pageNumberRepositories: number;
+  restart: boolean;
+  numCalls: number;
+  pageNumberSearch: number;
 }

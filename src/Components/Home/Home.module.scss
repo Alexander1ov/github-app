@@ -10,9 +10,11 @@
   align-items: center;
   gap: 18%;
 }
+
 .avatar {
   z-index: 5;
 }
+
 .img {
   width: 300px;
   height: 300px;
@@ -41,6 +43,7 @@
     font-size: 30px;
   }
 }
+
 .btn {
   cursor: pointer;
   margin-top: 20px;
@@ -50,6 +53,7 @@
   background-color: #19191936;
   font-size: 19px;
   color: #9b8d8d;
+
   &:hover {
     background-color: #191919;
     color: #595757;
@@ -65,21 +69,26 @@
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   font-size: 40px;
+
   h3 {
     margin: 0;
     color: transparent;
     animation: animHeader 2s forwards;
   }
+
   p {
     margin-bottom: 0;
   }
 }
+
 .link {
   margin-top: 20%;
   height: 80px;
   text-align: center;
+
   a {
     font-size: 50px;
+
     &:hover {
       font-size: 48px;
     }

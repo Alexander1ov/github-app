@@ -15,6 +15,7 @@
     align-items: center;
     gap: 10px;
   }
+
   img {
     width: 60px;
   }
@@ -24,6 +25,13 @@
     color: #fff;
   }
 }
+
+.nav {
+  color: #fff;
+  display: flex;
+  gap: 50px;
+}
+
 .btn {
   cursor: pointer;
   border: 2px solid #f3aa4e;
@@ -31,6 +39,7 @@
   background-color: #19191936;
   font-size: 19px;
   color: #fff;
+
   &:hover {
     background-color: #191919;
     color: #595757;
@@ -41,10 +50,4 @@
     color: #9b61b9;
     transform: scale(0.9);
   }
-}
-
-.nav {
-  color: #fff;
-  display: flex;
-  gap: 50px;
 }

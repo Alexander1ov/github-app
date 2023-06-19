@@ -14,5 +14,5 @@ export default function useUser() {
     dispatch(setUserData(response.data.viewer));
   };
 
-  return { getUserData, user };
+  return { user, getUserData };
 }
