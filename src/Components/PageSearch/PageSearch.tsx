@@ -8,8 +8,6 @@ import RepositoryCard from "../RepositoryCard/RepositoryCard";
 import Paginator from "../UI/Paginator/Paginator";
 
 import styles from "./PageSearch.module.scss";
-import { SEARCH_REPOSITORIES } from "../../graphql/searchRepositories";
-import { useQuery } from "@apollo/client";
 
 const PageSearch: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();

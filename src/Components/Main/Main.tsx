@@ -17,14 +17,14 @@ import styles from "./Main.module.scss";
 
 const Main: FC = () => {
   const { loading, error } = useQuery(GET_USER);
-  const { getUserData } = useUser();
+  const { getUserData,isAuth } = useUser();
   const { getRepositoriesList } = useRepositories();
 
   useEffect(() => {
     getUserData();
     getRepositoriesList(100);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isAuth]);
   return (
     <main className={styles.main}>
       <BubbleAnimation />

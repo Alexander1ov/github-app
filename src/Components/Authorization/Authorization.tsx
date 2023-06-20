@@ -1,15 +1,30 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Authorization.module.scss";
+import useUser from "../../redux/actions/userActions ";
 
 const Authorization: FC = () => {
   const [token, setToken] = useState("");
+  const { isAuth, addEntrance, getUserData } = useUser();
+
   const handleEntry = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     sessionStorage.setItem("token", token);
-    window.location.reload();
+    addEntrance();
+    getUserData();
+
+    // window.location.reload();
   };
+
+  useEffect(() => {
+    if (sessionStorage.getItem("token")) {
+      console.log(3);
+      
+      addEntrance();
+      getUserData();
+    }
+  }, [isAuth]);
 
   return (
     <section className={styles.entrance}>
