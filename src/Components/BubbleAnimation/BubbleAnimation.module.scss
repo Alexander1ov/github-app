@@ -17,105 +17,105 @@
   opacity: 0.5;
 }
 
-.bubbleFirst {
+.bubble_1 {
   left: -210px;
   @include bubble(150px, 40s);
 }
 
-.bubbleSecond {
+.bubble_2 {
   right: 200px;
   @include bubble(125px, 50s);
 }
 
-.bubbleThird {
+.bubble_3 {
   @include bubble(50px, 36s);
 }
 
-.bubbleFourth {
+.bubble_4 {
   right: 110px;
 
   @include bubble(75px, 42s);
 }
 
-.bubbleFifth {
+.bubble_5 {
   left: 210px;
 
   @include bubble(100px, 48s);
 }
 
-.bubbleSixth {
+.bubble_6 {
   right: 210px;
 
   @include bubble(150px, 60s);
 }
 
-.bubbleSeventh {
+.bubble_7 {
   left: 410px;
 
   @include bubble(80px, 58s);
 }
 
-.bubbleEighth {
+.bubble_8 {
   right: 210px;
 
   @include bubble(100px, 44s);
 }
 
-.bubbleNinth {
+.bubble_9 {
   left: 410px;
 
   @include bubble(50px, 46s);
 }
 
-.bubbleTenth {
+.bubble_10 {
   right: 310px;
 
   @include bubble(30px, 49s);
 }
 
-.bubbleEleventh {
+.bubble_11 {
   left: 610px;
 
   @include bubble(50px, 31s);
 }
 
-.bubbleTwelfth {
+.bubble_12 {
   right: 510px;
 
   @include bubble(55px, 32.8s);
 }
 
-.bubbleThirteenth {
+.bubble_13 {
   left: 710px;
 
   @include bubble(30px, 29.3s);
 }
 
-.bubbleFourteenth {
+.bubble_14 {
   right: 610px;
 
   @include bubble(40px, 27.5s);
 }
 
-.bubbleFifteenth {
+.bubble_15 {
   left: 810px;
 
   @include bubble(59px, 27s);
 }
 
-.bubbleSixteenth {
+.bubble_16 {
   right: 810px;
 
   @include bubble(75px, 24s);
 }
 
-.bubbleSeventeenth {
+.bubble_17 {
   left: 910px;
 
   @include bubble(70px, 35.5s);
 }
 
-.bubbleEighteenth {
+.bubble_18 {
   right: 910px;
 
   @include bubble(80px, 47s);

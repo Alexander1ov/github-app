@@ -3,3 +3,10 @@
   width: 100%;
   flex: 1 0 auto;
 }
+
+.error,
+.loading {
+  margin-top: 60px;
+  text-align: center;
+  position: relative;
+}

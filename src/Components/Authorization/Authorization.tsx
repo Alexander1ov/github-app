@@ -1,8 +1,9 @@
 import React, { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import styles from "./Authorization.module.scss";
 import useUser from "../../redux/actions/userActions ";
+
+import styles from "./Authorization.module.scss";
 
 const Authorization: FC = () => {
   const [token, setToken] = useState("");
@@ -13,14 +14,11 @@ const Authorization: FC = () => {
     sessionStorage.setItem("token", token);
     addEntrance();
     getUserData();
-
-    // window.location.reload();
   };
+  console.log(sessionStorage.getItem("token"));
 
   useEffect(() => {
     if (sessionStorage.getItem("token")) {
-      console.log(3);
-      
       addEntrance();
       getUserData();
     }

@@ -17,21 +17,23 @@ import styles from "./Main.module.scss";
 
 const Main: FC = () => {
   const { loading, error } = useQuery(GET_USER);
-  const { getUserData,isAuth } = useUser();
+  const { getUserData, isAuth } = useUser();
   const { getRepositoriesList } = useRepositories();
 
   useEffect(() => {
-    getUserData();
-    getRepositoriesList(100);
+    if (isAuth) {
+      getUserData();
+      getRepositoriesList(100);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
   return (
     <main className={styles.main}>
       <BubbleAnimation />
       {error ? (
-        <h2>Произошла ошибка</h2>
+        <h2 className={styles.error}>Произошла ошибка</h2>
       ) : loading ? (
-        <h2>Загрузка...</h2>
+        <h2 className={styles.loading}>Загрузка...</h2>
       ) : (
         <Routes>
           <Route path={ROUTES.SEARCH} element={<PageSearch />}></Route>
