@@ -1,32 +1,21 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import { ROUTES } from "../../constants/routes";
 import { GET_USER } from "../../graphql/user";
-import useRepositories from "../../redux/actions/repositoriesActions";
-import useUser from "../../redux/actions/userActions ";
 
+import BubbleAnimation from "../BubbleAnimation/BubbleAnimation";
 import PageSearch from "../PageSearch/PageSearch";
 import Home from "../Home/Home";
 import Repositories from "../Repositories/Repositories";
 import DetailsRepository from "../DetailsRepository/DetailsRepository";
-import BubbleAnimation from "../BubbleAnimation/BubbleAnimation";
 
 import styles from "./Main.module.scss";
 
 const Main: FC = () => {
   const { loading, error } = useQuery(GET_USER);
-  const { getUserData, isAuth } = useUser();
-  const { getRepositoriesList } = useRepositories();
 
-  useEffect(() => {
-    if (isAuth) {
-      getUserData();
-      getRepositoriesList(100);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAuth]);
   return (
     <main className={styles.main}>
       <BubbleAnimation />

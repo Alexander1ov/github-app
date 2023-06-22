@@ -7,16 +7,19 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import useUser from "../redux/actions/userActions ";
+import AuthWrapper from "./AuthWrapper/AuthWrapper";
 
 function App() {
-  const { isAuth  } = useUser();
+  const { isAuth } = useUser();
 
   return (
     <ApolloProvider client={apolloClient}>
-      {!isAuth && <Authorization />}
-      <Header />
-      <Main />
-      <Footer />
+      <AuthWrapper>
+        {!isAuth && <Authorization />}
+        <Header />
+        <Main />
+        <Footer />
+      </AuthWrapper>
     </ApolloProvider>
   );
 }

@@ -7,7 +7,12 @@ const BubbleAnimation: FC = () => {
   return (
     <section className={styles.animation}>
       {arrImg.map((img, index) => (
-        <img className={styles[`bubble_${index + 1}`]} src={img} alt="" />
+        <img
+          key={index}
+          className={styles[`bubble_${index + 1}`]}
+          src={img}
+          alt=""
+        />
       ))}
     </section>
   );
