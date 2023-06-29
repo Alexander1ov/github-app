@@ -2,12 +2,12 @@ import { ApolloProvider } from "@apollo/client";
 
 import apolloClient from "../graphql/apolloClient";
 
+import AuthWrapper from "./AuthWrapper/AuthWrapper";
 import Authorization from "./Authorization/Authorization";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import useUser from "../redux/actions/userActions ";
-import AuthWrapper from "./AuthWrapper/AuthWrapper";
 
 function App() {
   const { isAuth } = useUser();
